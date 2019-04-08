@@ -1,0 +1,22 @@
+<?php
+$collection = $block->get_data();
+?>
+<table border="0" width="300px">
+    <tr>
+        <th width="100px">Movie</th>
+        <th width="100px">Director</th>
+        <th width="100px">Actor</th>
+    </tr>
+    <?php
+        $already_echoed = array();
+
+        foreach($collection as $valuedata)
+        {
+    ?>
+    <tr <?php if(!in_array($valuedata['movie_name'],$already_echoed)) echo "style='border-top: solid 1px black'"?> >
+        <td width="100px"><?php if(!in_array($valuedata['movie_name'],$already_echoed)) {echo $valuedata['movie_name']; $already_echoed[] = $valuedata['movie_name'];} ?></td>
+        <td width="100px"><?php if(!in_array($valuedata['director_name'],$already_echoed)) {echo $valuedata['director_name']; $already_echoed[] = $valuedata['director_name'];} ?></td>
+        <td width="100px"><?php echo $valuedata['name']; ?></td>
+    </tr>
+    <?php }?>
+</table>
