@@ -1,5 +1,5 @@
 <?php
-namespace Magenest\Movie\Model\ResourceModel\ShowData;
+namespace Magenest\Movie\Model\ResourceModel\ShowMovie;
 /**
  * Subscription Collection
  */
@@ -12,6 +12,6 @@ class Collection extends
      * @return void
      */
     public function _construct() {
-        $this->_init('Magenest\Movie\Model\ShowData','Magenest\Movie\Model\ResourceModel\ShowData');
+        $this->_init('Magenest\Movie\Model\ShowMovie','Magenest\Movie\Model\ResourceModel\ShowMovie');
     }
 }

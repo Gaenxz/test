@@ -2,7 +2,7 @@
 
 namespace Magenest\Movie\Block;
 
-use Magenest\Movie\Model\ResourceModel\ShowData\CollectionFactory;
+use Magenest\Movie\Model\ResourceModel\ShowActor\CollectionFactory;
 use Magento\Framework\View\Element\Template;
 
 class Getdata extends Template

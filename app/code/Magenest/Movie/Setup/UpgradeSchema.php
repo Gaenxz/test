@@ -150,7 +150,6 @@ class UpgradeSchema implements UpgradeSchemaInterface
                     'actor_id',
                     \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE);
             $installer->getConnection()->createTable($table);
-            $installer->getConnection()->createTable($table);
 
             $installer->endSetup();
         }

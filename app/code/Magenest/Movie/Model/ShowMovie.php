@@ -2,7 +2,7 @@
 
 namespace Magenest\Movie\Model;
 
-class ShowData extends \Magento\Framework\Model\AbstractModel
+class ShowMovie extends \Magento\Framework\Model\AbstractModel
 {
     public function __construct(
         \Magento\Framework\Model\Context $context,
@@ -15,7 +15,8 @@ class ShowData extends \Magento\Framework\Model\AbstractModel
         parent::__construct($context, $registry, $resource,$resourceCollection, $data);
     }
 
-    public function _construct() {
-        $this->_init('Magenest\Movie\Model\ResourceModel\ShowData');
+    public function _construct()
+    {
+        $this->_init('Magenest\Movie\Model\ResourceModel\ShowMovie');
     }
 }

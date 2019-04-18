@@ -26,13 +26,13 @@ class Insertdata extends \Magento\Framework\App\Action\Action
 
     public function execute()
     {
-        for($i=0;$i<10;$i++)
-        {
-            $actorData = ['name' => 'Loc'.$i];
-            $directorData = ['name' => 'Loc'.$i];
-            $this->insertMultiple('magenest_actor', $actorData);
-            $this->insertMultiple('magenest_director', $directorData);
-        }
+//        for($i=0;$i<10;$i++)
+//        {
+//            $actorData = ['name' => 'Loc'.$i];
+//            $directorData = ['name' => 'Loc'.$i];
+//            $this->insertMultiple('magenest_actor', $actorData);
+//            $this->insertMultiple('magenest_director', $directorData);
+//        }
 
 //        for($i=1;$i<=8;$i++)
 //        {
@@ -41,6 +41,14 @@ class Insertdata extends \Magento\Framework\App\Action\Action
 //            $this->insertMultiple('magenest_movie', $movieData);
 //            $this->insertMultiple('magenest_movie_actor', $actormovieData);
 //        }
+        $this->insertMultiple('magenest_movie',['add'=>array(
+            'movie_id'=>null,
+            'name'=>'fasdfasf',
+            'description'=>'fasfasfas',
+            'rating'=>12,
+            'director_id'=>2
+        )]);
         $this->getResponse()->setBody('success');
+
     }
 }
