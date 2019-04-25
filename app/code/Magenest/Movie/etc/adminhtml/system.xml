@@ -19,6 +19,7 @@
                        type="text" sortOrder="15" showInDefault="1"
                        showInWebsite="1" showInStore="1">
                     <label>Text Field</label>
+                    <backend_model>Magenest\Movie\Model\Config\Backend\PingPongEvent</backend_model>
                 </field>
                 <field id="yes_no_field" translate="label"
                        type="select" sortOrder="10" showInDefault="1"
@@ -53,11 +54,6 @@
                        showInWebsite="1" showInStore="1">
                     <frontend_model>Magenest\Movie\Block\System\Config\Button</frontend_model>
                 </field>
-            </group>
-            <group id="actorpage" translate="label" type="text"
-                   sortOrder="1" showInDefault="1" showInWebsite="1"
-                   showInStore="1">
-                <label>Actor Page</label>
             </group>
         </section>
     </system>

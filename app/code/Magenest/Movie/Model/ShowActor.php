@@ -1,7 +1,11 @@
 <?php
 
 namespace Magenest\Movie\Model;
-
+/**
+ * Class ShowActor
+ * @package Magenest\Movie\Model
+ * @method getName($name)
+ */
 class ShowActor extends \Magento\Framework\Model\AbstractModel
 {
     public function __construct(

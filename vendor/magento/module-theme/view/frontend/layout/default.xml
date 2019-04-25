@@ -116,6 +116,7 @@
                 <block class="Magento\Framework\View\Element\Html\Links" name="footer_links">
                     <arguments>
                         <argument name="css_class" xsi:type="string">footer links</argument>
+                        <argument name="abc_d" xsi:type="string">footeradad links</argument>
                     </arguments>
                 </block>
                 <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
