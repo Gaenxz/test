@@ -1,1 +1,9 @@
-/var/www/html/magentotest/vendor/magento/module-ui/view/base/web/templates/area.html
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<if args="wasActivated">
+    <div each="elems" visible="active" attr="'data-area-active': active" render=""/>
+</if>

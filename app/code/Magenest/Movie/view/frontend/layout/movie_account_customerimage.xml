@@ -20,7 +20,7 @@
                             <argument name="css_class" xsi:type="string">nav items</argument>
                         </arguments>
                         <block class="Magento\Customer\Block\Account\SortLinkInterface"
-                               name="customer-account-navigation-dashboard" template="">
+                               name="customer-account-navigation-dashboard" >
                             <arguments>
                                 <argument name="label" xsi:type="string" translate="true">Account Dashboard</argument>
                                 <argument name="path" xsi:type="string">movie/account/customerimage</argument>
