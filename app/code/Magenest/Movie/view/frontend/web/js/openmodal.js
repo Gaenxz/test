@@ -26,7 +26,7 @@ require([
         }]
     };
 
-    var popup = modal(options,$('#popup-form'))
+    var popup = modal(options,$('#popup-form'));
 
     $("input[name='open_custom_login_modal']").on('click',function () {
        $("#popup-form").modal("openModal");

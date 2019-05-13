@@ -8,7 +8,7 @@ class ShowMovie extends
     protected function _construct()
     {
         $this->_blockGroup = 'Magenest_Movie';
-        $this->_controller = 'adminhtml_ShowActor';
+        $this->_controller = 'Adminhtml_ShowMovie';
         parent::_construct();
         $this->buttonList->update('add','label',__('New Movie'));
         $this->buttonList->update('add','onclick',

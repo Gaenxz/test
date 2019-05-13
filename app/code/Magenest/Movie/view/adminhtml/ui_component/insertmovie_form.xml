@@ -77,8 +77,6 @@
                 <validation>
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
-                <dataType>text</dataType>
-                <visible>true</visible>
             </settings>
         </field>
 
@@ -96,8 +94,6 @@
                 <validation>
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
-                <dataType>text</dataType>
-                <visible>true</visible>
             </settings>
         </field>
 
@@ -106,28 +102,30 @@
                 <item name="config" xsi:type="array">
                     <item name="label" xsi:type="string">Movie rating</item>
                     <item name="visible" xsi:type="boolean">true</item>
-                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="dataType" xsi:type="string">number</item>
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">sampleform</item>
+                    <item name="notice" xsi:type="string" translate="true">Rating 0-10 star</item>
+                    <item name="default" xsi:type="string">0</item>
                 </item>
             </argument>
             <settings>
                 <validation>
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                     <rule name="validate-number" xsi:type="boolean">true</rule>
+                    <rule name="validate-number-range" xsi:type="string">1-10</rule>
                 </validation>
-                <dataType>number</dataType>
-                <visible>true</visible>
             </settings>
         </field>
 
         <field name="movie_director_id">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magenest\Movie\Model\Source\DirectorId</item>
                 <item name="config" xsi:type="array">
                     <item name="label" xsi:type="string">Movie director ID</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">sampleform</item>
                 </item>
             </argument>
@@ -136,8 +134,6 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                     <rule name="validate-number" xsi:type="boolean">true</rule>
                 </validation>
-                <dataType>number</dataType>
-                <visible>true</visible>
             </settings>
         </field>
 

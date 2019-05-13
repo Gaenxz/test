@@ -11,7 +11,11 @@
 
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Magenest_Movie::config_movie" title="Movie Section" />
+                            <resource id="Magenest_Movie::config_movie" title="Movie Menu" >
+                                <resource id="Magenest_Movie::section" title="Movie Section" >
+                                    <resource id="Magenest_Movie::detail" title="Movie Detail" />
+                                </resource>
+                            </resource>
                             <resource id="Magenest_Movie::grid_data" title="Movie Grid Data" />
                         </resource>
                     </resource>

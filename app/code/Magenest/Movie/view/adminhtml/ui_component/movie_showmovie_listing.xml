@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">movie_showmovie_listing.movie_listing_data_source</item>
+            <item name="deps" xsi:type="string">movie_showmovie_listing.movie_listing_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">movie_showmovie_listing_columns</item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New Movie</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">movie/insertmovie</item>
+            </item>
+        </item>
+    </argument>
+    <dataSource name="movie_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
+            <!--tao virtual class trong di.xml-->
+            <argument name="name" xsi:type="string">movie_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">movie_id</argument>
+            <argument name="requestFieldName" xsi:type="string">movie_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">movie_id</item>
+                    </item>
+                    <!--storageconfig kiem tra data da load : Loi lap du lieu khi filter hoac paging-->
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <!--<filters name="listing_filters">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="params" xsi:type="array">-->
+                        <!--<item name="filters_modifier" xsi:type="array"/>-->
+                    <!--</item>-->
+                    <!--<item name="observers" xsi:type="array">-->
+                        <!--<item name="filters" xsi:type="object">Magento\Catalog\Ui\Component\Listing\Filters</item>-->
+                    <!--</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+            <!--<settings>-->
+                <!--<statefull>-->
+                    <!--<property name="applied" xsi:type="boolean">false</property>-->
+                <!--</statefull>-->
+            <!--</settings>-->
+        <!--</filters>-->
+        <filters name="listing_filters"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="movie_showmovie_listing_columns">
+        <selectionsColumn name="ids">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="resizeEnabled" xsi:type="boolean">false</item>
+                    <item name="resizeDefaultWidth" xsi:type="string">55</item>
+                    <item name="indexField" xsi:type="string">movie_id</item>
+                </item>
+            </argument>
+        </selectionsColumn>
+        <column name="movie_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">movie_id</item>
+                </item>
+            </argument>
+        </column>
+        <column name="name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">name</item>
+                </item>
+            </argument>
+        </column>
+        <column name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">description</item>
+                </item>
+            </argument>
+        </column>
+        <column name="rating" class="Magenest\Movie\Ui\Component\Columns\Rating">
+            <!--goi 1 class de tuy chinh noi dung trong cot -->
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">rating</item>
+                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
+                    <!--in html tra ve tu datasource-->
+                </item>
+            </argument>
+        </column>
+        <column name="director_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">director_id</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

@@ -15,11 +15,11 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         $name,
         $primaryFieldName,
         $requestFieldName,
-        CollectionFactory $employeeCollectionFactory,
+        CollectionFactory $movieCollectionFactory,
         array $meta = [],
         array $data = []
     ) {
-        $this->collection = $employeeCollectionFactory->create();
+        $this->collection = $movieCollectionFactory->create();
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
     }
 

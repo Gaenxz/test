@@ -45,7 +45,8 @@ class Index extends \Magento\Backend\App\Action
             $this->insertMultiple('magenest_movie',
                 $movie['movie_name'],
                 $movie['movie_description'],
-                $rating->getDataByKey('movie_rating'),
+//                $rating->getDataByKey('movie_rating'), // get data event
+                $movie['movie_rating'],
                 $movie['movie_director_id']);
             $this->_redirect('movie/showmovie');
         }

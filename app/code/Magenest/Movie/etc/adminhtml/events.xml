@@ -2,12 +2,12 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="adminhtml_customer_prepare_save">
-        <observer name="first_name_change" instance="Magenest\Movie\Observer\FirstNameChangeObserver" />
+        <observer name="first_name_change" instance="Magenest\Movie\Observer\FirstNameChangeObserver" disabled="true" />
     </event>
     <event name="save_movie">
-        <observer name="save_a_movie" instance="Magenest\Movie\Observer\SaveMovie" />
+        <observer name="save_a_movie" instance="Magenest\Movie\Observer\SaveMovie" disabled="true" />
     </event>
     <event name="ping_pong">
-        <observer name="ping_to_pong" instance="Magenest\Movie\Observer\PingPong"/>
+        <observer name="ping_to_pong" instance="Magenest\Movie\Observer\PingPong" disabled="false" />
     </event>
 </config>

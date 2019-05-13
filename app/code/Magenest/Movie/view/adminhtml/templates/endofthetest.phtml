@@ -1,0 +1,49 @@
+<section class="admin__page-section">
+    <div class="admin__page-section-title">
+        <span class="title">End of the Test</span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-information">
+            <div class="admin__page-section-item-title">
+                <span class="title">Total Module (not include Magento)</span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-primary">
+                    <tr>
+                        <th>Total Module:</th>
+                        <td><?php echo $block->moduleNumber() ?></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="admin__page-section-item-title order-information">
+            <div class="admin__page-section-item-title">
+                <span class="title">Total Report</span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary">
+                    <tr>
+                        <th>Total Customer</th>
+                        <td><?php echo $block->customerNumber() ?></td>
+                    </tr>
+                    <tr>
+                        <th>Total Product</th>
+                        <td><?php echo $block->productNumber() ?></td>
+                    </tr>
+                    <tr>
+                        <th>Total Order</th>
+                        <td><?php echo $block->orderNumber() ?></td>
+                    </tr>
+                    <tr>
+                        <th>Total Invoice</th>
+                        <td><?php echo $block->invoiceNumber() ?></td>
+                    </tr>
+                    <tr>
+                        <th>Total Credit Memo</th>
+                        <td><?php echo $block->creditmemoNumber() ?></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
